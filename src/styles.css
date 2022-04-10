@@ -1,0 +1,66 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  body{
+    margin: 0;
+    background: #ED4264;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #FFEDBC, #ED4264);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #FFEDBC, #ED4264); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+  
+  .calculator-grid {
+    display: grid;
+    margin-top: 3rem;
+    grid-template-columns: repeat(4, 6rem);
+    grid-template-rows: minmax(6rem, auto) repeat(5, 5rem);
+    justify-content: center;
+    
+    
+  }
+  .calculator-grid > button {
+    cursor: pointer;
+    font-size: 2rem;
+    border: 1px solid #207575;
+    outline: none;
+    background-color: white;
+    color: #207575;
+    width: 100%;
+    height: 100%;
+  }
+  .calculator-grid > div> button {
+    cursor: pointer;
+    font-size: 2rem;
+    border: 1px solid white;
+    outline: none;
+    background-color: #207575;
+    color: #fff;
+    width: 100%;
+    height: 100%;
+  }
+  .span-two {
+    grid-column: span 2;
+  }
+  .output {
+    background: #39CCCC;
+    grid-column: 1 /-1;
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end;
+    padding: 0.75rem;
+    word-wrap: break-word;
+    word-break: break-all;
+  }
+  
+  .output .previous-operand {
+    font-size: 1.5rem;
+  color: #001f3f;
+  opacity: 0.7;
+  }
+  
+  .output .current-operand {
+    font-size: 2.5rem;
+    color: #001f3f;
+  }
+  
